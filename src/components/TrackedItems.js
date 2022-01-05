@@ -12,7 +12,7 @@ export default class TrackedItems extends Component {
     }
 
     handleProduct(){
-        axios.get('http://localhost:3500/products').then( (res) => {
+        axios.get('/products').then( (res) => {
             this.setState({ productsArry: res.data })
         }).catch(err => console.log(err))
     }
