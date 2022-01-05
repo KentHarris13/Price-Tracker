@@ -1,10 +1,10 @@
 require('dotenv').config()
-const {CONNECTION_STRING} = process.env
+const {DATABASE_URL} = process.env
 const { password } = require('pg/lib/defaults')
 const Sequelize = require('sequelize')
 
 // you wouldn't want to rejectUnauthorized in a production app, but it's great for practice
-const sequelize = new Sequelize(CONNECTION_STRING, {
+const sequelize = new Sequelize(DATABASE_URL, {
     dialect: 'postgres', 
     dialectOptions: {
         ssl: {
