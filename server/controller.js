@@ -1,10 +1,10 @@
 require('dotenv').config()
-const {DATABASE_URL} = process.env
+const {HEROKU_POSTGRESQL_SILVER_URL} = process.env
 const { password } = require('pg/lib/defaults')
 const Sequelize = require('sequelize')
 
 // you wouldn't want to rejectUnauthorized in a production app, but it's great for practice
-const sequelize = new Sequelize(DATABASE_URL, {
+const sequelize = new Sequelize(HEROKU_POSTGRESQL_SILVER_URL, {
     dialect: 'postgres', 
     dialectOptions: {
         ssl: {
