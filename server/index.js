@@ -5,6 +5,7 @@ const cors = require("cors")
 const app = express()
 const controller = require("./controller")
 const { favoriteList, getProducts, saveFavorite } = require('./controller.js')
+const path = require ("path");
 
 app.use(express.json())
 app.use(cors())
@@ -23,7 +24,7 @@ app.post('/saveFavorite/:id', saveFavorite)
 
 //added to try to get this to deploy
 app.get('/*', function(req, res) {
-    res.sendFile(path.join(__dirname, '../build' 'index.html'));
+    res.sendFile(path.join(__dirname, '../build', 'index.html'));
 })
 
 
