@@ -1,25 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
+// import Header from './components/Header.js' 
+import TrackedItems from './components/TrackedItems'
+// import { application_name } from 'pg/lib/defaults';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='headerBackground'>
+      <h5 className='headerText'>Price Tracker</h5>
+
+      
+      </div>
+      <div className='dataContaner'>
+      <div></div>
+      </div>
+      <TrackedItems />
     </div>
   );
 }
+
+
 
 export default App;
