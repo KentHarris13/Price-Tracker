@@ -16,7 +16,7 @@ export default class LineChart extends Component {
 				datasets: [{ 
 					data: [this.props.max_price, this.props.one_year_price, this.props.six_month_price, this.props.one_month_price, this.props.current_price, this.props.dateadded],
 
-                    label: "Total",
+                    label: "Price",
 					borderColor: "#3e95cd",
 					// backgroundColor: "#ffffff",
 	

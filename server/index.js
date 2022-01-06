@@ -12,7 +12,7 @@ app.use(cors())
 
 //Added to try and get this to deploy
 app.use(express.static(path.resolve(__dirname, "../build")));
-
+console.log(path.join(__dirname, '../build', 'index.html'))
 
 
 // app.get("/", (req, res) => {res.send("Hello World")})
@@ -23,7 +23,7 @@ app.put('/favorite', favoriteList)
 app.post('/saveFavorite/:id', saveFavorite)
 
 //added to try to get this to deploy
-app.get('/*', function(req, res) {
+app.get('*', function(req, res) {
     res.sendFile(path.join(__dirname, '../build', 'index.html'));
 })
 

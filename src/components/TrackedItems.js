@@ -12,7 +12,7 @@ export default class TrackedItems extends Component {
     }
 
     handleProduct(){
-        axios.get('/products').then( (res) => {
+        axios.get('https://price-tracker-kent.herokuapp.com/products').then( (res) => {
             this.setState({ productsArry: res.data })
         }).catch(err => console.log(err))
     }
